@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES"
+            buildForTesting = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "65020F1C1A97F411000468C4"
+               BuildableName = "BattleshipTests.xctest"
+               BlueprintName = "BattleshipTests"
+               ReferencedContainer = "container:Battleship.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug">
+      <Testables>
+         <TestableReference>
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "65020F1C1A97F411000468C4"
+               BuildableName = "BattleshipTests.xctest"
+               BlueprintName = "BattleshipTests"
+               ReferencedContainer = "container:Battleship.xcodeproj">
+            </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "BattleshipAddShipTests">
+               </Test>
+               <Test
+                  Identifier = "BattleshipBattleStateTests/testCanShootAfterAllShipsPlaced()">
+               </Test>
+               <Test
+                  Identifier = "BattleshipBattleStateTests/testCanShootTwiceAfterAllShipsPlaced()">
+               </Test>
+               <Test
+                  Identifier = "BattleshipBattleStateTests/testCantShootWithOnePlayer()">
+               </Test>
+               <Test
+                  Identifier = "BattleshipBattleStateTests/testCantShootWithOneShip()">
+               </Test>
+               <Test
+                  Identifier = "BattleshipBattleStateTests/testStatusAfterAllShipsPlaced()">
+               </Test>
+               <Test
+                  Identifier = "BattleshipBattleStateTests/testStatusAfterShipsPlacedForPlayer1()">
+               </Test>
+               <Test
+                  Identifier = "BattleshipBattleStateTests/testStatusAtStart()">
+               </Test>
+            </SkippedTests>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO">
+   </LaunchAction>
+</Scheme>

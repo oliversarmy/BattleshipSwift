@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7515.2" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7512"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Battle View Ctrl-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="BattleViewCtrl" customModule="Battleship" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s0j-LT-QlA">
+                                <rect key="frame" x="299" y="595" width="2" height="2"/>
+                                <color key="backgroundColor" red="0.3241194751" green="0.67584842879999996" blue="0.99222695709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="s0j-LT-QlA" secondAttribute="height" multiplier="1:1" id="mVN-cB-mjo"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="YCT-s0-XgA" kind="embed" identifier="playerSegue" id="se9-7s-a1t"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVD-zy-uIH">
+                                <rect key="frame" x="19" y="30" width="562" height="562"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rVD-zy-uIH" secondAttribute="height" multiplier="1:1" id="zXJ-vy-hky"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="YCT-s0-XgA" kind="embed" identifier="enemyPlayerSegue" id="JPM-Rg-5Jq"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="rVD-zy-uIH" secondAttribute="trailing" constant="3" id="ECv-aI-n6Q"/>
+                            <constraint firstAttribute="centerX" secondItem="s0j-LT-QlA" secondAttribute="centerX" id="X6o-m3-Fh4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="s0j-LT-QlA" secondAttribute="bottom" constant="3" id="X6r-Qs-vOB"/>
+                            <constraint firstItem="rVD-zy-uIH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="YkK-Dg-Mri"/>
+                            <constraint firstItem="s0j-LT-QlA" firstAttribute="top" secondItem="rVD-zy-uIH" secondAttribute="bottom" constant="3" id="i1q-OS-H4v"/>
+                            <constraint firstItem="rVD-zy-uIH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="sPE-3T-lpP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="636" y="309"/>
+        </scene>
+        <!--Board Collection View Ctrl-->
+        <scene sceneID="AvG-PY-ts7">
+            <objects>
+                <collectionViewController id="YCT-s0-XgA" customClass="BoardCollectionViewCtrl" customModule="Battleship" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Xy6-FC-0Iq">
+                        <rect key="frame" x="0.0" y="0.0" width="562" height="562"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="daA-wH-jAM">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BoardCell" id="fFy-Se-J4A" customClass="BoardCollectionViewCell" customModule="Battleship" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AZr-NE-CoI">
+                                            <rect key="frame" x="20" y="14" width="11" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.74999999999999978" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acW-yD-6Y6">
+                                            <rect key="frame" x="20" y="14" width="11" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.3241194751" green="0.67584842879999996" blue="0.99222695709999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="acW-yD-6Y6" firstAttribute="baseline" secondItem="AZr-NE-CoI" secondAttribute="baseline" id="3Bf-y3-E6j"/>
+                                    <constraint firstItem="AZr-NE-CoI" firstAttribute="centerX" secondItem="fFy-Se-J4A" secondAttribute="centerX" id="3Y4-Ad-qvs"/>
+                                    <constraint firstAttribute="centerY" secondItem="AZr-NE-CoI" secondAttribute="centerY" id="YlL-yA-Wf5"/>
+                                    <constraint firstItem="acW-yD-6Y6" firstAttribute="leading" secondItem="AZr-NE-CoI" secondAttribute="leading" id="mgd-Ku-3HM"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="textLabel" destination="AZr-NE-CoI" id="hmq-OY-NjX"/>
+                                    <outlet property="xLabel" destination="acW-yD-6Y6" id="RCG-UT-Ta0"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="YCT-s0-XgA" id="3pp-Ab-fqx"/>
+                            <outlet property="delegate" destination="YCT-s0-XgA" id="d8s-RI-rbj"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WIR-Yo-DYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1467" y="309"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JPM-Rg-5Jq"/>
+    </inferredMetricsTieBreakers>
+</document>
