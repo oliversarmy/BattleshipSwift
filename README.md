@@ -8,9 +8,9 @@ To get an idea how it words, look at the tests or load it into Xcode and run the
 
 To read a blog post about how to program it yourself.
 
-[blog battleship] (http://olivers.army/SwiftBattleship/)
+[blog battleship] (http://olivers.army/BattleshipSwift/)
 
 The interface is minimalistic.
 
-![Battleship](https://github.com/oliversarmy/Battleship/raw/master/assets/battleImage.png)
+![Battleship](https://github.com/oliversarmy/BattleshipSwift/raw/master/assets/battleImage.png)
 
